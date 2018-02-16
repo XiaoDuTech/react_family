@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-build":"webpack --config ./config/webpack.dev.config.js"
+    "dev-build": "webpack --config ./config/webpack.dev.config.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
     "webpack": "^3.11.0"
   }
 }
