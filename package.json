@@ -4,7 +4,8 @@
   "description": "react全家桶",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-build":"webpack --config ./config/webpack.dev.config.js"
   },
   "repository": {
     "type": "git",
