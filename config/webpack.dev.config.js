@@ -15,5 +15,11 @@ module.exports = {
       use:['babel-loader?cacheDirectory=true'],
       include:path.join(__dirname,'../src')
     }]
+  },
+  devServer:{
+    port:8080,
+    contentBase:path.join(__dirname,'../dist'),
+    historyApiFallback:true,
+    host:'0.0.0.0'
   }
 }
