@@ -1,4 +1,7 @@
-let func = str => {
-  document.getElementById('app').innerHTML = str;
-};
-func('我现在正在使用babel')
+import React from 'react';
+import ReactDom from 'react-dom';
+import Hello from './component/Hello/Hello'
+ReactDom.render(
+  <Hello/>,
+  document.getElementById('app')
+);
