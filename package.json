@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-build": "webpack --config ./config/webpack.dev.config.js",
-    "start":"webpack-dev-server --config ./config/webpack.dev.config.js",
-    "dev":"webpack-dev-server --config ./config/webpack.dev.config.js --color --progress"
+    "start": "webpack-dev-server --config ./config/webpack.dev.config.js",
+    "dev": "webpack-dev-server --config ./config/webpack.dev.config.js --color --progress --hot"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-hot-loader": "^4.0.0-beta.22",
     "react-router-dom": "^4.2.2",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"
