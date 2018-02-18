@@ -33,5 +33,6 @@ module.exports = {
       actions:path.join(__dirname,'../src/redux/actions'),
       reducers:path.join(__dirname,'../src/redux/reducers')
     }
-  }
+  },
+  devtool:'inline-source-map'
 }
