@@ -1,12 +1,17 @@
 const path = require('path');
+
+let webpack = require('webpack');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   /*入口文件*/
-  entry: [
-    'react-hot-loader/patch',
-    path.join(__dirname,'../src/index.js')
-  ],
+  entry: {
+    app:[
+      'react-hot-loader/patch',
+      path.join(__dirname,'../src/index.js')
+    ],
+    vendor:['react','react-router-dom','redux','react-dom','react-redux']
+  },
   /*输出到dist文件夹，输出文件名字为bundle.js*/
   output:{
     path:path.join(__dirname,'../dist'),
@@ -57,6 +62,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename:'index.html',
       template:path.join(__dirname,'../src/index.html')
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name:'vendor'
     })
   ]
 }
