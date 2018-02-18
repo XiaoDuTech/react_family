@@ -52,12 +52,16 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name:'vendor'
     }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name:'runtime'
+    }),
     new UglifyJSPlugin(),
     new webpack.DefinePlugin({
         'process.env':{
             'NODE_ENV':JSON.stringify('production')
         }
-    })
+    }),
+    new webpack.HashedModuleIdsPlugin()
   ],
   resolve:{
     alias:{
