@@ -4,6 +4,7 @@ let webpack = require('webpack');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin'); 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   devtool:'cheap-module-source-map',
@@ -33,7 +34,10 @@ module.exports = {
       },
       {
         test:/\.css$/,
-        use:['style-loader','css-loader']
+        use:ExtractTextPlugin.extract({
+          fallback:"style-loader",
+          use:"css-loader"
+        })
       },
       {
         test:/\.(png|jpg|gif)$/,
@@ -68,6 +72,10 @@ module.exports = {
       root:__dirname+'/../',
       verbose:true,
       dry:false
+    }),
+    new ExtractTextPlugin({
+      filename:'[name].[contenthash:5].css',
+      allChunks:true
     })
   ],
   resolve:{
