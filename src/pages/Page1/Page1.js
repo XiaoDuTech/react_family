@@ -5,7 +5,7 @@ export default class Page1 extends Component{
   render(){
     return(
       <div className="page-box">
-        this is Page1
+        this is Page12
         <img src={image}/>
       </div>
     )
